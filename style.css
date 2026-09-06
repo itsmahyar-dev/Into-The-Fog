@@ -1,0 +1,795 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+   HTML / BODY
+================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  font-family: Arial, sans-serif;
+
+  background: #0b0d0f;
+  color: #fff;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+
+  min-height: 550px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background-image: url("img/bg.png");
+}
+
+/* ==================================================
+   PARALLAX
+================================================== */
+
+.parallax {
+  position: relative;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Desktop parallax */
+  background-attachment: fixed;
+
+  overflow: hidden;
+}
+
+/* Dark overlay */
+
+.parallax::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 800px;
+
+  padding: 0 20px;
+}
+
+/* Small text above title */
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  color: #c5cbd0;
+}
+
+/* Main title */
+
+.hero h1 {
+  font-size: clamp(4rem, 10vw, 9rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -6px;
+}
+
+/* Second part of title */
+
+.hero h1 span {
+  color: #aeb8bd;
+}
+
+/* Hero description */
+
+.hero p {
+  max-width: 500px;
+
+  margin: 30px auto;
+
+  color: #d0d4d6;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.hero-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  padding: 14px 22px;
+
+  color: #111;
+
+  background: #fff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+/* Arrow */
+
+.hero-btn span {
+  font-size: 18px;
+}
+
+/* Button hover */
+
+.hero-btn:hover {
+  background: #cdd4d8;
+
+  transform: translateY(-4px);
+}
+
+/* ==================================================
+   NORMAL SECTIONS
+================================================== */
+
+.section {
+  width: 100%;
+
+  min-height: 600px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 80px;
+
+  padding: 100px 20px;
+
+  background: #0b0d0f;
+}
+
+/* ==================================================
+   SECTION NUMBER
+================================================== */
+
+.section-number {
+  flex-shrink: 0;
+
+  font-size: 120px;
+
+  font-weight: bold;
+
+  line-height: 1;
+
+  color: #202529;
+}
+
+/* ==================================================
+   SECTION TEXT
+================================================== */
+
+.section > div:last-child {
+  max-width: 650px;
+}
+
+/* Small section label */
+
+.label {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  color: #899197;
+}
+
+/* Section heading */
+
+.section h2 {
+  max-width: 650px;
+
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+/* Highlighted heading text */
+
+.section h2 span {
+  color: #788188;
+}
+
+/* Section paragraph */
+
+.section p {
+  max-width: 600px;
+
+  margin-top: 30px;
+
+  color: #92999e;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   MOUNTAIN
+================================================== */
+
+.mountain {
+  width: 100%;
+
+  height: 700px;
+
+  background-image: url("img/mountain.jpg");
+}
+
+/* ==================================================
+   FOREST
+================================================== */
+
+.forest {
+  width: 100%;
+
+  height: 700px;
+
+  background-image: url("img/forest.jpg");
+}
+
+/* ==================================================
+   PARALLAX CONTENT
+================================================== */
+
+.parallax-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+/* Small text */
+
+.parallax-content span {
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  color: #d1d5d7;
+}
+
+/* Parallax heading */
+
+.parallax-content h2 {
+  margin-top: 15px;
+
+  font-size: clamp(3rem, 8vw, 7rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+}
+
+/* Highlight */
+
+.parallax-content strong {
+  color: #aeb8bd;
+}
+
+/* ==================================================
+   EXPERIENCE SECTION
+================================================== */
+
+.content {
+  justify-content: space-between;
+}
+
+.content-text {
+  max-width: 650px;
+}
+
+/* Continue link */
+
+.text-link {
+  display: inline-block;
+
+  margin-top: 30px;
+
+  padding-bottom: 6px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #555;
+
+  transition: 0.3s;
+}
+
+/* Link hover */
+
+.text-link:hover {
+  border-color: #fff;
+}
+
+/* ==================================================
+   INFO CARD
+================================================== */
+
+.info-card {
+  flex-shrink: 0;
+
+  width: 280px;
+
+  padding: 30px;
+
+  border: 1px solid #292e32;
+
+  background: #111417;
+}
+
+/* Card number */
+
+.info-card span {
+  color: #737b80;
+
+  font-size: 13px;
+}
+
+/* Card title */
+
+.info-card h3 {
+  margin: 30px 0 15px;
+
+  font-size: 24px;
+}
+
+/* Card paragraph */
+
+.info-card p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/* ==================================================
+   FINAL SECTION
+================================================== */
+
+.final {
+  min-height: 650px;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* Final heading */
+
+.final h2 {
+  font-size: clamp(4rem, 10vw, 9rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+}
+
+/* Final paragraph */
+
+.final p {
+  margin-bottom: 30px;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+  width: 100%;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  border-top: 1px solid #202427;
+
+  color: #666d72;
+
+  font-size: 12px;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .section {
+    gap: 50px;
+
+    padding: 80px 20px;
+  }
+
+  .section-number {
+    font-size: 90px;
+  }
+
+  .content {
+    justify-content: center;
+  }
+
+  .content-text {
+    max-width: 550px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+  /* Disable fixed parallax on mobile */
+
+  .parallax {
+    background-attachment: scroll;
+  }
+
+  /* Hero */
+
+  .hero {
+    min-height: 500px;
+
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+  }
+
+  .hero p {
+    max-width: 380px;
+
+    margin: 20px auto;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .hero-btn {
+    padding: 12px 18px;
+
+    font-size: 12px;
+  }
+
+  /* Normal sections */
+
+  .section {
+    min-height: auto;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    padding: 70px 20px;
+
+    text-align: center;
+  }
+
+  /* Section number */
+
+  .section-number {
+    font-size: 60px;
+
+    line-height: 1;
+  }
+
+  /* Section content */
+
+  .section > div:last-child {
+    width: 100%;
+
+    max-width: 600px;
+  }
+
+  /* Labels */
+
+  .label {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  /* Headings */
+
+  .section h2 {
+    width: 100%;
+
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    font-size: clamp(2rem, 8vw, 3rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+  }
+
+  /* Paragraphs */
+
+  .section p {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 20px auto 0;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  /* Parallax sections */
+
+  .mountain,
+  .forest {
+    height: 500px;
+  }
+
+  .parallax-content {
+    padding: 20px;
+  }
+
+  .parallax-content span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .parallax-content h2 {
+    margin-top: 12px;
+
+    font-size: clamp(2.7rem, 12vw, 4rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+  }
+
+  /* Experience section */
+
+  .content {
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    text-align: center;
+  }
+
+  .content-text {
+    width: 100%;
+
+    max-width: 600px;
+  }
+
+  /* Info card */
+
+  .info-card {
+    width: 280px;
+
+    padding: 25px;
+
+    text-align: left;
+  }
+
+  .info-card h3 {
+    margin: 20px 0 10px;
+
+    font-size: 20px;
+  }
+
+  /* Final section */
+
+  .final {
+    min-height: 500px;
+
+    padding: 70px 20px;
+  }
+
+  .final h2 {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+  }
+
+  .final p {
+    margin: 20px 0 25px;
+
+    font-size: 13px;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 480px;
+
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+
+    letter-spacing: -2px;
+  }
+
+  .hero p {
+    max-width: 320px;
+
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 60px 15px;
+
+    gap: 20px;
+  }
+
+  .section-number {
+    font-size: 50px;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+
+    letter-spacing: -1.5px;
+  }
+
+  .section p {
+    max-width: 330px;
+
+    font-size: 12px;
+  }
+
+  .mountain,
+  .forest {
+    height: 450px;
+  }
+
+  .parallax-content {
+    padding: 15px;
+  }
+
+  .parallax-content span {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .parallax-content h2 {
+    font-size: 2.7rem;
+
+    letter-spacing: -2px;
+  }
+
+  .info-card {
+    width: 90%;
+
+    padding: 20px;
+  }
+
+  .final {
+    min-height: 480px;
+
+    padding: 60px 15px;
+  }
+
+  .final h2 {
+    font-size: 3.2rem;
+
+    letter-spacing: -2px;
+  }
+}
